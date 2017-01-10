@@ -1,0 +1,17 @@
+<md-card>
+      	 <md-toolbar color='primary'>ToDo</md-toolbar>
+         <md-card-content>
+         <h4>Still todo:</h4>
+         <ul>
+              <li *ngFor='let todos of todoVar'><md-checkbox [checked]='false' (change)="todos.status = status(todos.status)" color='primary'>
+            {{ todos.task }} - <span [ngClass]='setClasses(todos.status)'> {{ todos.status }} </span></md-checkbox>
+              </li>
+        </ul>
+        <h4>Add ToDo:</h4>
+                        <form>
+                           <md-input #postText placeholder="add to list" ></md-input>   
+                           <button (click)="onClickPost( postText.value); postText.value =''"  md-raised-button color="primary">ADD</button>
+                           <button (click)="postData();" type="button" md-raised-button color="primary">UPDATE</button> 
+                        </form>
+         </md-card-content>
+      </md-card>    

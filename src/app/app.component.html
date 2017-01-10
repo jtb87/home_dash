@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<nav md-tab-nav-bar>
+  <span md-tab-link>Adelaarsweg</span>
+  <a md-tab-link routerLink="home"
+    routerLinkActive="active_tab">Home</a>
+  <a md-tab-link routerLink="todo"
+  routerLinkActive="active_tab">Todo</a>
+  <a md-tab-link routerLink="graphs"
+  routerLinkActive="active_tab">Graphs</a>
+</nav>
+<div class="flex-container" fxLayout="row" fxLayoutAlign="center center">
+<router-outlet></router-outlet>
+</div>
+<!--
+Very useful!
+http://tphangout.com/angular-2-lazy-loading/
+http://stackoverflow.com/questions/36180108/how-to-bootstrap-an-angular-2-application-asynchronously
+-->

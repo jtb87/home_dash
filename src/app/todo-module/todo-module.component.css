@@ -1,0 +1,15 @@
+
+.red {
+    color: red;
+}
+.green {    
+    color: green;
+ }
+ul {
+  list-style: none;
+}
+
+
+md-card{
+    max-width: 600px;
+}
