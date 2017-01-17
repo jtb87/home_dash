@@ -11,6 +11,7 @@ import { KwOutV3Service } from './service/kw3out.service';
 import * as d3 from 'd3';
 import { HourlyGraphComponent } from './hourly-graph/hourly-graph.component';
 import { DailyGraphComponent } from './daily-graph/daily-graph.component';
+import { StreamGraphComponent } from './stream-graph/stream-graph.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { DailyGraphComponent } from './daily-graph/daily-graph.component';
     routing,
     MaterialModule
   ],
-  declarations: [D3ModuleComponent, HourlyGraphComponent, DailyGraphComponent]
+  declarations: [D3ModuleComponent, HourlyGraphComponent, DailyGraphComponent, StreamGraphComponent]
 })
 export class D3ModuleModule { }

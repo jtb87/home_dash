@@ -1,11 +1,13 @@
       <md-card>
-         <md-toolbar color="primary">Daily Graph</md-toolbar>
+         <md-toolbar color="primary">Power Usage Graphs</md-toolbar>
          <nav md-tab-nav-bar>
   <span md-tab-link>Meter Graphs:</span>
   <a md-tab-link routerLink="d3-hourly"
     routerLinkActive="active_tab">Hourly data</a>
   <a md-tab-link routerLink="d3-daily"
   routerLinkActive="active_tab">Daily data</a>
+  <a md-tab-link routerLink="d3-stream"
+  routerLinkActive="active_tab">Stream data</a>
 </nav>
 <router-outlet></router-outlet>
         </md-card>
