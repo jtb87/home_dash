@@ -139,6 +139,10 @@ updateDaily() {
       this.createChart()
       this.onClickd3()
   }
+ngOnDestroy(){
+      console.log("comp destroyed")
+
+       }
 
   }
 
