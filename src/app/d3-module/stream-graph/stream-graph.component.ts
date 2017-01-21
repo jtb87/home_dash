@@ -14,13 +14,10 @@ export class StreamGraphComponent implements OnInit {
   @ViewChild('hourly') chartcontainer: ElementRef;
 
   data:KwModel[]; 
-
-  constructor(private _httpService:KwOutV3Service) { 
-     
-     const $data = this._httpService.getkwv2()
-
-     $data.subscribe(data =>  this.data = data) 
-      console.log(this.data)
+  
+  constructor(private _httpService:KwOutV3Service) {
+     const $data = this._httpService.getkwv2();
+     $data.subscribe(data =>  this.data = data); 
   }
 
   onclick(){
@@ -30,5 +27,6 @@ export class StreamGraphComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

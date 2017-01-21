@@ -13,16 +13,6 @@ import { TodoApiService } from './service/todo-api.service';
   providers: [TodoApiService]
 })
 export class TodoModuleComponent implements OnInit {
-/*uf_links:any = [{name:"Angular-cli resource",url:"https://www.sitepoint.com/ultimate-angular-cli-reference/"},{url:"https://keathmilligan.net/create-reusable-chart-components-with-angular-2-and-d3-js-version-4/",name:"Create Re-usable chart component"},
-  {url:"https://scotch.io/tutorials/angular-2-http-requests-with-observables",name:"REST API calls angular2"},{url:"http://mean.expert/2016/05/02/angular-2-chart-component/",name:"Angular2 chart component"},{url:"http://stackoverflow.com/questions/37038467/how-to-implement-d3-in-angular-2",name:"Implement D3 with Angular 2"}
-  ,{url:"http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html",name:"ang2 syntax"}, 
-  
-  {url:"https://scotch.io/tutorials/token-based-authentication-for-angularjs-and-laravel-apps",name:"More about tokens (JWT)"},
-  
-  {url:"http://blog.angular-university.io/angular2-ngmodule/",name:"Angular2 modules explained"}
-  
-  ];*/
-  
   public todoVar:any = [{'status':'open', 'task':'FIX GET!'}]
   /*todoVar2:any = {task:"string",status:"open"}*/
 

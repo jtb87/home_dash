@@ -82,16 +82,16 @@ export class DailyGraphComponent implements OnInit {
 
 updateDaily() {
         let tick_value = 1;
-        let data = JSON.parse(this.test_d3)
-        this.y.domain([0, (d3.max(data, d => (d["Usage"])+0.5))])
-        this.xsort = data.map(d => d.Date)
-        this.x.domain(this.xsort)
+        let data = JSON.parse(this.test_d3);
+        this.y.domain([0, (d3.max(data, d => (d["Usage"])+0.5))]);
+        this.xsort = data.map(d => d.Date);
+        this.x.domain(this.xsort);
 
 //update x axis // select group with class Xaxis // do transitions            
         this.svg.transition().select('g.Xaxis')
             .duration(200)
             .call(d3.axisBottom(this.x)
-                    .tickValues(this.x.domain().filter(i => !(i % tick_value))))
+                    .tickValues(this.x.domain().filter(i => !(i % tick_value))));
 
 // update the y axis 
         this.svg.transition().select("g.Yaxis") 
