@@ -28,22 +28,19 @@ export class KwOutV3Service {
   constructor( private _http:Http) { 
   }
   // daily data
-  getkwv3():Observable<any>{ 
+   getkwv3():Observable<any>{ 
     return this._http.get(this.daily_api)
     .map(res=> res.json())};
   //stream data
-   getkwv5():Observable<KwModel[]>{  
-     return this._http.get(this.stream_api)
-     .map(res => res.json());
-    }
+   getkwv2():Observable<any>{ 
+      return Observable.concat(Observable.of(null), IntervalObservable.create(10000))
+      .flatMap(() => this._http.get(this.stream_api))
+      .map(res => res.json())
+  };
    // 30 min data
-   getkwv1():Observable<any>{  
+    getkwv1():Observable<any>{  
      return this._http.get(this.hourly_api)
      .map(res => res.json());
-     }
+     };
 
-     getkwv2():Observable<any>{ 
-        return Observable.concat(Observable.of(null), IntervalObservable.create(5000))
-        .flatMap(() => this._http.get(this.stream_api))
-        .map(res => res.json());
-    }}  
+ }  

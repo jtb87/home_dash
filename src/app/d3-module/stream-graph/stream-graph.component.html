@@ -1,14 +1,16 @@
 <md-card-content>
 	<ul> 
-	<li>Jesse waaath</li>
-	<!--<li *ngFor='let datas of data'> {{ datas.id }} -- {{ datas.current }} </li> -->
-
-	<li>{{ data | async }} </li>
+	<li *ngFor='let datas of data | async'> {{ datas.id }} -- {{ datas.current }} </li>
 	</ul>
     <div class="svg-container" #hourly></div>
+
+
    </md-card-content>
 <md-card-actions class="md-align-center">
 <form>
     <button type="button" (click)="onclick()" md-raised-button>Unsubscribe button</button>
 </form>
 </md-card-actions>      
+
+
+

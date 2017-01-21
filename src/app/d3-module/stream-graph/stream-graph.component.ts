@@ -1,7 +1,7 @@
 import { Component,ViewChild, ElementRef,  ViewEncapsulation,OnInit } from '@angular/core';
 import { KwOutV3Service } from "../service/kw3out.service"
 import { KwModel } from '../service/kw-model';
-
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-stream-graph',
@@ -13,20 +13,22 @@ import { KwModel } from '../service/kw-model';
 export class StreamGraphComponent implements OnInit {
   @ViewChild('hourly') chartcontainer: ElementRef;
 
-  data:KwModel[]; 
+  data:Observable<KwModel[]>;
   
   constructor(private _httpService:KwOutV3Service) {
      const $data = this._httpService.getkwv2();
-     $data.subscribe(data =>  this.data = data); 
+     this.data = $data;
   }
 
   onclick(){
     console.log(this.data)
-     
   }
 
   ngOnInit() {
   }
 
+ /*ngOnDestroy(){
+   this.data.unsubscribe();
+}*/
 
 }
